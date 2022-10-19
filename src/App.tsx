@@ -9,7 +9,7 @@ function App() {
   co.add(smallPizza);
   co.add(mediumPizza);
   co.add(largePizza);
-  const total = co.total(pizzas, 1);
+  const total = co.total(pizzas, 2);
 
   return (
     <>
