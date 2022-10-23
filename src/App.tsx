@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <div>{JSON.stringify(co.checkOutItems)}</div>
-      <div>total: {total}</div>
+      <div>total: {total} </div>
     </>
   );
 }
