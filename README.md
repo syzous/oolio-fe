@@ -4,7 +4,7 @@
 
 ### `npm run start`
 
-All data will be store in `data.js` file
+All data will be store in `data.ts` file
 
 # Test
 
