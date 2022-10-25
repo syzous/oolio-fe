@@ -1,21 +1,19 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "./App.css";
-import { pizzas, rules } from "./data";
-import CheckOut from "./CheckOut";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+
+const Store = React.lazy(() => import("./pages/Store"));
 
 function App() {
-  const [smallPizza, mediumPizza, largePizza] = pizzas;
-  const co = new CheckOut(rules);
-  co.add(smallPizza);
-  co.add(mediumPizza);
-  co.add(largePizza);
-  const total = co.total(pizzas, 2);
-
   return (
-    <>
-      <div>{JSON.stringify(co.checkOutItems)}</div>
-      <div>total: {total} </div>
-    </>
+    <Suspense fallback={<div>Loading...</div>}>
+      <NavBar />
+
+      <Routes>
+        <Route path="/" element={<Store />} />
+      </Routes>
+    </Suspense>
   );
 }
 
