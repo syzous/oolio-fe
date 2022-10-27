@@ -6,7 +6,7 @@
 
 All data will be store in `data.ts` file
 
-# Test
+# Test case
 
 All test cases are in \_\_tests\_\_ folder
 
